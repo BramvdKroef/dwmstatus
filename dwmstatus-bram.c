@@ -28,6 +28,7 @@ typedef struct ctlData {
 #include "ram.h"
 #include "datetime.h"
 #include "weather.h"
+#include "net_if.h"
 
 #include "config.h"
 
