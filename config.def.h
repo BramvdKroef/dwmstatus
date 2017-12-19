@@ -44,11 +44,12 @@ struct net_if_data netif = {
  *                 bar. 
  * - function arg  Argument to pass to the function.
  */
-CtlData ctl_p[0] = {
+size_t ctl_n = 5;
+CtlData ctl_p[5] = {
   // len  format                 function         null     function arg
   {  8,   "%s",                  weather_ctl,     NULL,    &weatherdata},
   {  9,   "RAM: %3.0f%%",        ram_ctl,         NULL,    NULL},
   {  9,   "Email: %02d",         mailmonitor_ctl, NULL,    &maildata},
-  {  23,  "%e %b %Y %a | %k:%M", datetime_ctl,    NULL,    NULL}
+  {  23,  "%e %b %Y %a | %k:%M", datetime_ctl,    NULL,    NULL},
   {  17,  "↑ %04d/s ↓ %04d/s",   net_if_ctl,      NULL,    &netif}
 };
