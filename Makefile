@@ -19,6 +19,6 @@ dwmstatus.o: ${SRC}
 dwmstatus: dwmstatus.o
 
 install: all
-	install -m 755 dwmstatus ${DESTDIR}${PREFIX}/bin/dwmstatus
+	install -m 755 -D dwmstatus ${DESTDIR}${PREFIX}/bin/dwmstatus
 
 .PHONY: all install
